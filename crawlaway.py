@@ -30,8 +30,7 @@ while i < 5:                                        #For now only five entries. 
     except:
         continue
     soup = BeautifulSoup(data)
-    titleTag = soup.html.head.title
-    print titleTag.string                           #To display the title of a given page
+    print soup.title                                #To display the title of a given page
     links = soup.findAll('a', href=True)
     crawled.add(crawling)                           #As the page has been crawled and should not be crawled again
     for link in links:
